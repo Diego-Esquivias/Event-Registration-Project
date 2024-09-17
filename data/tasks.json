@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "carMake": "Ford",
+    "carDate": "2024-09-04",
+    "carDoor": "2door",
+    "carLocation": "we",
+    "carWeight": "2259"
+  },
+  {
+    "id": 2,
+    "carMake": "Subaru",
+    "carDate": "11/2/2024",
+    "carDoor": "2-door",
+    "carLocation": "California",
+    "carWeight": 2849
+  },
+  {
+    "id": 3,
+    "carMake": "Isuzu",
+    "carDate": "6/12/2026",
+    "carDoor": "2-door",
+    "carLocation": "Virginia",
+    "carWeight": 2558
+  },
+  {
+    "id": 4,
+    "carMake": "Ford",
+    "carDate": "7/10/2025",
+    "carDoor": "2-door",
+    "carLocation": "Minnesota",
+    "carWeight": 3651
+  },
+  {
+    "id": 5,
+    "carMake": "Ford",
+    "carDate": "9/13/2026",
+    "carDoor": "4-door",
+    "carLocation": "Arizona",
+    "carWeight": 3107
+  },
+  {
+    "id": 6,
+    "carMake": "Porsche",
+    "carDate": "8/24/2026",
+    "carDoor": "2-door",
+    "carLocation": "Texas",
+    "carWeight": 2521
+  },
+  {
+    "id": 7,
+    "carMake": "Buick",
+    "carDate": "10/29/2025",
+    "carDoor": "4-door",
+    "carLocation": "Florida",
+    "carWeight": 3154
+  },
+  {
+    "id": 8,
+    "carMake": "Rolls-Royce",
+    "carDate": "8/10/2025",
+    "carDoor": "4-door",
+    "carLocation": "Florida",
+    "carWeight": 2693
+  },
+  {
+    "id": 9,
+    "carMake": "BMW",
+    "carDate": "9/17/2024",
+    "carDoor": "4-door",
+    "carLocation": "Utah",
+    "carWeight": 3389
+  },
+  {
+    "id": 10,
+    "carMake": "Alfa Romeo",
+    "carDate": "6/4/2026",
+    "carDoor": "4-door",
+    "carLocation": "Indiana",
+    "carWeight": 3265
+  },
+  {
+    "id": 11,
+    "carMake": "Mitsubishi",
+    "carDate": "12/12/2024",
+    "carDoor": "4-door",
+    "carLocation": "California",
+    "carWeight": 3863
+  },
+  {
+    "id": 12,
+    "carMake": "Chevrolet",
+    "carDate": "7/11/2026",
+    "carDoor": "4-door",
+    "carLocation": "District of Columbia",
+    "carWeight": 3744
+  },
+  {
+    "id": 13,
+    "carMake": "Kia",
+    "carDate": "7/7/2025",
+    "carDoor": "2-door",
+    "carLocation": "Kentucky",
+    "carWeight": 3411
+  },
+  {
+    "id": 14,
+    "carMake": "Mazda",
+    "carDate": "7/15/2025",
+    "carDoor": "4-door",
+    "carLocation": "North Dakota",
+    "carWeight": 2961
+  },
+  {
+    "id": 15,
+    "carMake": "Ford",
+    "carDate": "10/9/2024",
+    "carDoor": "4-door",
+    "carLocation": "North Dakota",
+    "carWeight": 3789
+  },
+  {
+    "id": 16,
+    "carMake": "Suzuki",
+    "carDate": "5/6/2026",
+    "carDoor": "2-door",
+    "carLocation": "Nevada",
+    "carWeight": 2961
+  },
+  {
+    "id": 17,
+    "carMake": "Ford",
+    "carDate": "8/28/2026",
+    "carDoor": "2-door",
+    "carLocation": "Connecticut",
+    "carWeight": 2166
+  },
+  {
+    "id": 18,
+    "carMake": "Volvo",
+    "carDate": "6/30/2025",
+    "carDoor": "4-door",
+    "carLocation": "Texas",
+    "carWeight": 3614
+  },
+  {
+    "id": 19,
+    "carMake": "Lincoln",
+    "carDate": "3/13/2025",
+    "carDoor": "4-door",
+    "carLocation": "Virginia",
+    "carWeight": 3525
+  },
+  {
+    "id": 20,
+    "carMake": "Acura",
+    "carDate": "8/2/2025",
+    "carDoor": "2-door",
+    "carLocation": "Georgia",
+    "carWeight": 3338
+  },
+  {
+    "id": 21,
+    "carMake": "Chevrolet",
+    "carDate": "5/3/2026",
+    "carDoor": "2-door",
+    "carLocation": "Illinois",
+    "carWeight": 2715
+  },
+  {
+    "id": 22,
+    "carMake": "BMW",
+    "carDate": "9/17/2025",
+    "carDoor": "4-door",
+    "carLocation": "Virginia",
+    "carWeight": 2402
+  },
+  {
+    "id": 23,
+    "carMake": "Lincoln",
+    "carDate": "6/19/2026",
+    "carDoor": "4-door",
+    "carLocation": "Florida",
+    "carWeight": 3999
+  },
+  {
+    "id": 24,
+    "carMake": "Chevrolet",
+    "carDate": "8/6/2026",
+    "carDoor": "2-door",
+    "carLocation": "District of Columbia",
+    "carWeight": 2282
+  },
+  {
+    "id": 25,
+    "carMake": "Chevrolet",
+    "carDate": "10/13/2024",
+    "carDoor": "4-door",
+    "carLocation": "Maine",
+    "carWeight": 3073
+  },
+  {
+    "id": 26,
+    "carMake": "Lexus",
+    "carDate": "4/20/2025",
+    "carDoor": "2-door",
+    "carLocation": "Georgia",
+    "carWeight": 2271
+  },
+  {
+    "id": 27,
+    "carMake": "Mercedes-Benz",
+    "carDate": "1/28/2026",
+    "carDoor": "4-door",
+    "carLocation": "California",
+    "carWeight": 3776
+  },
+  {
+    "id": 28,
+    "carMake": "Jeep",
+    "carDate": "9/30/2024",
+    "carDoor": "4-door",
+    "carLocation": "Arizona",
+    "carWeight": 3140
+  },
+  {
+    "id": 29,
+    "carMake": "Cadillac",
+    "carDate": "10/21/2025",
+    "carDoor": "4-door",
+    "carLocation": "California",
+    "carWeight": 2254
+  },
+  {
+    "id": 30,
+    "carMake": "Mazda",
+    "carDate": "5/6/2025",
+    "carDoor": "4-door",
+    "carLocation": "Kentucky",
+    "carWeight": 2163
+  },
+  {
+    "id": 31,
+    "carMake": "Mitsubishi",
+    "carDate": "8/17/2026",
+    "carDoor": "4-door",
+    "carLocation": "Wisconsin",
+    "carWeight": 3405
+  },
+  {
+    "id": 32,
+    "carMake": "Pontiac",
+    "carDate": "1/16/2026",
+    "carDoor": "4-door",
+    "carLocation": "Georgia",
+    "carWeight": 2228
+  },
+  {
+    "id": 33,
+    "carMake": "Mercedes-Benz",
+    "carDate": "7/7/2026",
+    "carDoor": "2-door",
+    "carLocation": "Virginia",
+    "carWeight": 2251
+  },
+  {
+    "id": 34,
+    "carMake": "Dodge",
+    "carDate": "1/27/2026",
+    "carDoor": "2-door",
+    "carLocation": "Missouri",
+    "carWeight": 3206
+  },
+  {
+    "id": 35,
+    "carMake": "Chevrolet",
+    "carDate": "3/15/2025",
+    "carDoor": "2-door",
+    "carLocation": "Texas",
+    "carWeight": 3668
+  },
+  {
+    "id": 36,
+    "carMake": "Ford",
+    "carDate": "1/17/2025",
+    "carDoor": "4-door",
+    "carLocation": "Nevada",
+    "carWeight": 2788
+  },
+  {
+    "id": 37,
+    "carMake": "Chevrolet",
+    "carDate": "11/14/2025",
+    "carDoor": "2-door",
+    "carLocation": "Connecticut",
+    "carWeight": 2136
+  },
+  {
+    "id": 38,
+    "carMake": "Chevrolet",
+    "carDate": "1/28/2025",
+    "carDoor": "4-door",
+    "carLocation": "New York",
+    "carWeight": 3163
+  },
+  {
+    "id": 39,
+    "carMake": "Volvo",
+    "carDate": "10/28/2025",
+    "carDoor": "4-door",
+    "carLocation": "Nevada",
+    "carWeight": 2566
+  },
+  {
+    "id": 40,
+    "carMake": "Land Rover",
+    "carDate": "12/28/2025",
+    "carDoor": "2-door",
+    "carLocation": "Tennessee",
+    "carWeight": 2544
+  },
+  {
+    "id": 41,
+    "carMake": "Lexus",
+    "carDate": "7/27/2025",
+    "carDoor": "4-door",
+    "carLocation": "Oregon",
+    "carWeight": 2204
+  },
+  {
+    "id": 42,
+    "carMake": "Dodge",
+    "carDate": "3/4/2026",
+    "carDoor": "2-door",
+    "carLocation": "Georgia",
+    "carWeight": 3788
+  },
+  {
+    "id": 43,
+    "carMake": "Chevrolet",
+    "carDate": "3/28/2026",
+    "carDoor": "4-door",
+    "carLocation": "New York",
+    "carWeight": 3501
+  },
+  {
+    "id": 44,
+    "carMake": "Toyota",
+    "carDate": "10/8/2025",
+    "carDoor": "2-door",
+    "carLocation": "Virginia",
+    "carWeight": 2029
+  },
+  {
+    "id": 45,
+    "carMake": "Volkswagen",
+    "carDate": "2/12/2026",
+    "carDoor": "4-door",
+    "carLocation": "Tennessee",
+    "carWeight": 3372
+  },
+  {
+    "id": 46,
+    "carMake": "Ford",
+    "carDate": "8/30/2026",
+    "carDoor": "2-door",
+    "carLocation": "Arizona",
+    "carWeight": 2738
+  },
+  {
+    "id": 47,
+    "carMake": "Lotus",
+    "carDate": "4/7/2025",
+    "carDoor": "2-door",
+    "carLocation": "New York",
+    "carWeight": 3288
+  },
+  {
+    "id": 48,
+    "carMake": "Hyundai",
+    "carDate": "8/16/2026",
+    "carDoor": "4-door",
+    "carLocation": "Nevada",
+    "carWeight": 2584
+  },
+  {
+    "id": 49,
+    "carMake": "Chrysler",
+    "carDate": "1/31/2026",
+    "carDoor": "4-door",
+    "carLocation": "Oregon",
+    "carWeight": 2153
+  },
+  {
+    "id": 50,
+    "carMake": "Toyota",
+    "carDate": "11/7/2024",
+    "carDoor": "2-door",
+    "carLocation": "Nevada",
+    "carWeight": 2978
+  }
+]

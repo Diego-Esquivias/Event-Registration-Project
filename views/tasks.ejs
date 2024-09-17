@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/task.css">
+    <title>Edit Task</title>
+</head>
+<body>
+    <h1>Edit Task</h1>
+    <form action="/tasks/<%= task.id %>" method="POST">
+        <input type="text" name="carMake" value="<%= task.carMake %>" required>
+        <input type="date" name="carDate" value="<%= task.carDate %>" required></br>
+        <input type="number" name="carWeight" value="<%= task.carWeight %>" required></br>
+        <select name="carDoor">
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+        </select>
+        <select name="carLocation">
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+            <option value="4door">4-Door</option>
+            <option value="2door">2-Door</option>
+        </select>
+        <button type="submit">Update Task</button>
+    </form>
+    <button type="button" class="back"><a href="/">Back to list</a></button>
+</body>
+</html>

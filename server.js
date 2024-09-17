@@ -1,30 +1,78 @@
-var express = require('express');
-var app = express();
-const PORT = 5000;
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
+const app = express();
+const PORT = 5000
+const path = require('path');
 
-// Imported Data
-const carData = require('./data/events');
-
-// Set the view engine to EJS
+// Middleware
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-// Use res.render to load up an ejs view file
+// Load tasks from JSON file
+const getTasks = () => {
+    const data = fs.readFileSync('./data/tasks.json', 'utf8');
+    return JSON.parse(data);
+}
 
-// Index page
-app.get("/", function(req, res) {
-    // let people = []
-    let judgement = "Nerds will inherit the earth"
-    res.render('pages/index', {
-        cars: carData,
-        tagline: judgement,
-    })
+const saveTasks = (tasks) => {
+    fs.writeFileSync('./data/tasks.json', JSON.stringify(tasks, null, 2));
+};
+
+// Routes
+
+// GET: Show all tasks
+app.get('/', (req, res) => {
+    const tasks = getTasks();
+    res.render('index', { tasks });
+});
+
+// POST: Add new task
+app.post('/tasks', (req, res) => {
+    const tasks = getTasks();
+        const newTask = {
+            id: tasks.length + 1,
+            carMake: req.body.carMake,
+            carDate: req.body.carDate,
+            carDoor: req.body.carDoor,
+            carLocation: req.body.carLocation,
+            carWeight: req.body.carWeight
+        };
+        tasks.push(newTask);
+        saveTasks(tasks);
+        res.redirect('/');
 })
 
-// About page
-app.get('/about', function(req, res) {
-    res.render('pages/form')
+// GET: Show a single task (for editing)
+app.get('/tasks/:id/edit', (req, res) => {
+    const tasks = getTasks();
+    const task = tasks.find(task => task.id == req.params.id);
+    res.render('tasks', { task });
 })
 
+// PUT: Update a task
+app.post('/tasks/:id', (req, res) => {
+    const tasks = getTasks();
+    const taskIndex = tasks.findIndex(task => task.id == req.params.id);
+    tasks[taskIndex].carDoor = req.body.carDoor;
+    tasks[taskIndex].carMake = req.body.carMake;
+    tasks[taskIndex].carDate = req.body.carDate;
+    tasks[taskIndex].carLocation = req.body.carLocation;
+    tasks[taskIndex].carWeight = req.body.carWeight;
+    saveTasks(tasks);
+    res.redirect('/');
+})
+
+// DELETE: Delete a task
+app.post('/tasks/:id/delete', (req, res) => {
+    let tasks = getTasks();
+    tasks = tasks.filter(task => task.id != req.params.id);
+    saveTasks(tasks);
+    res.redirect('/');
+})
+
+// SERVER
 app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
-})
+    console.log(`Server running on port ${PORT}`)
+});

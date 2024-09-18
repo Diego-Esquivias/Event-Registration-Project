@@ -25,7 +25,7 @@ const saveTasks = (tasks) => {
 // GET: Show all tasks
 app.get('/', (req, res) => {
     const tasks = getTasks();
-    res.render('index', { tasks });
+    res.render('events', { tasks });
 });
 
 // POST: Add new task

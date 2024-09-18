@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>New Car Showcase</title>
+</head>
+<body>
+    <h1>New Car Showcases</h1>
+
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <div class="task">
+                    <div class="task-details">
+                        <h2>Event <%= task.id %></h2>
+                        <h3 class="task-name"><%= task.carMake %></h3>
+                        <h5>Date: <%= task.carDate %></h5>
+                        <p class="task-desc">Weight: <%= task.carWeight %> lbs</p>
+                        <p class="task-desc">Location: <%= task.carLocation %></p>
+                        <p class="task-desc">Door Type: <%= task.carDoor %></p>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

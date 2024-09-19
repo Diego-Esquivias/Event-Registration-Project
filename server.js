@@ -49,7 +49,7 @@ app.get('/admin', (req, res) => {
 app.post('/tasks', (req, res) => {
     const tasks = getTasks();
         const newTask = {
-            id: tasks.length + 1,
+            id: tasks.length + 1, // TODO: edit this to function properly ----------------------------------------------------------------
             carMake: req.body.carMake,
             carDate: req.body.carDate,
             carDoor: req.body.carDoor,

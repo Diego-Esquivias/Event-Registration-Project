@@ -16,14 +16,15 @@ const getTasks = () => {
     return JSON.parse(data);
 }
 
+const saveTasks = (tasks) => {
+    fs.writeFileSync('./data/tasks.json', JSON.stringify(tasks, null, 2));
+};
+
+// Load events from JSON file
 const getEvents = () => {
     const data = fs.readFileSync('./data/events.json', 'utf8');
     return JSON.parse(data);
 }
-
-const saveTasks = (tasks) => {
-    fs.writeFileSync('./data/tasks.json', JSON.stringify(tasks, null, 2));
-};
 
 const saveEvents = (events) => {
     fs.writeFileSync('./data/events.json', JSON.stringify(events, null, 2));
@@ -37,6 +38,7 @@ app.get('/', (req, res) => {
     res.render('events', { tasks });
 });
 
+// GET: Show admin panel with all tasks and events
 app.get('/admin', (req, res) => {
     const tasks = getTasks();
     const events = getEvents();

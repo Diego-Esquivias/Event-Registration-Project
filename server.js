@@ -16,8 +16,17 @@ const getTasks = () => {
     return JSON.parse(data);
 }
 
+const getEvents = () => {
+    const data = fs.readFileSync('./data/events.json', 'utf8');
+    return JSON.parse(data);
+}
+
 const saveTasks = (tasks) => {
     fs.writeFileSync('./data/tasks.json', JSON.stringify(tasks, null, 2));
+};
+
+const saveEvents = (events) => {
+    fs.writeFileSync('./data/events.json', JSON.stringify(events, null, 2));
 };
 
 // Routes
@@ -26,6 +35,12 @@ const saveTasks = (tasks) => {
 app.get('/', (req, res) => {
     const tasks = getTasks();
     res.render('events', { tasks });
+});
+
+app.get('/admin', (req, res) => {
+    const tasks = getTasks();
+    const events = getEvents();
+    res.render('index', { tasks, events });
 });
 
 // POST: Add new task
@@ -41,6 +56,21 @@ app.post('/tasks', (req, res) => {
         };
         tasks.push(newTask);
         saveTasks(tasks);
+        res.redirect('/');
+})
+
+// POST: Add new user to register for an event
+app.post('/events', (req, res) => {
+    const events = getEvents();
+        const newEvent = {
+            id: Number(req.body.id),
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            phone: req.body.phone,
+        };
+        events.push(newEvent);
+        saveEvents(events);
         res.redirect('/');
 })
 

@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>New Car Showcase</title>
 </head>
 <body>
     <h1>New Car Showcases</h1>
 
-    <ul>
+    <form action="/events" method="POST" class="content">
+        <fieldset>
+            <legend>Register for an Event Here</legend>
+            <label for="1">Event Number: </label>
+            <input type="number" id="1" name="id" value="" required> <br>
+            <label for="2">First Name: </label>
+            <input type="text" id="2" name="firstName" value="" required></br>
+            <label for="3">Last Name: </label>
+            <input type="text" id="3" name="lastName" value="" required></br>
+            <label for="4">Email: </label>
+            <input type="email" id="4" name="email" value="" required></br>
+    
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <ul class="content" id="carList">
         <% tasks.forEach(task => { %>
-            <li>
+            <li id="carItem">
                 <div class="task">
                     <div class="task-details">
                         <h2>Event <%= task.id %></h2>
                         <h3 class="task-name"><%= task.carMake %></h3>
                         <h5>Date: <%= task.carDate %></h5>
-                        <p class="task-desc">Weight: <%= task.carWeight %> lbs</p>
-                        <p class="task-desc">Location: <%= task.carLocation %></p>
-                        <p class="task-desc">Door Type: <%= task.carDoor %></p>
+                        <p class="task-weight">Weight: <%= task.carWeight %> lbs</p>
+                        <p class="task-location">Location: <%= task.carLocation %></p>
+                        <p class="task-door">Door Type: <%= task.carDoor %></p>
                     </div>
                 </div>
             </li>

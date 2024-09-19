@@ -1,0 +1,44 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    width: 100vh;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#carList {
+    list-style-type: none;
+}
+
+#carItem {
+    background-color: rgb(74, 74, 167);
+    padding: 1em;
+    width: 50vh;
+    margin: 2vh auto 2vh auto;
+    border-radius: 25px;
+}
+
+fieldset {
+    background-color: rgba(128, 128, 128, 0);
+    border-radius: 25px;
+    border: black solid 2px;
+    input {
+        background-color: rgba(255, 255, 255, 0.579);
+        margin: 0.5vh auto 1vh auto;
+    }
+    text-align: center;
+}
+
+legend {
+    background-color: rgb(52, 52, 52);
+    padding: 1vh;
+    border-radius: 10px;
+    color: white;
+}

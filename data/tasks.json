@@ -2,10 +2,10 @@
   {
     "id": 1,
     "carMake": "Ford",
-    "carDate": "2024-09-04",
+    "carDate": "2024-09-03",
     "carDoor": "4-door",
-    "carLocation": "Alabama",
-    "carWeight": "2259"
+    "carLocation": "Arizona",
+    "carWeight": 2850
   },
   {
     "id": 2,

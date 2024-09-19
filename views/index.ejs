@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>New Car Showcase</title>
 </head>
 <body>
     <h1>New Car Showcases</h1>
+
+    <ul>
+        <% events.forEach(event => { %>
+            <li>
+                <div class="event">
+                    <div class="task-details">
+                        <h3 class="task-name">Registered for Event <%= event.id %></h3>
+                        <p>Full Name: <%= event.firstName %> <%= event.lastName %></p>
+                        <p>Email: <%= event.email %></p>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+
     <div class="form">
         <form action="/tasks" method="POST">
             <fieldset>
@@ -82,9 +97,9 @@
     </div>
     
 
-    <ul>
+    <ul class="content" id="carList">
         <% tasks.forEach(task => { %>
-            <li>
+            <li id="carItem">
                 <div class="task">
                     <div class="task-details">
                         <h3 class="task-name"><%= task.carMake %></h3>

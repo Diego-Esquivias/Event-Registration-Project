@@ -48,8 +48,9 @@ app.get('/admin', (req, res) => {
 // POST: Add new task
 app.post('/tasks', (req, res) => {
     const tasks = getTasks();
+    const maxId = tasks.length > 0 ? Math.max(...tasks.map(task => task.id)) : 0;
         const newTask = {
-            id: tasks.length + 1, // TODO: edit this to function properly ----------------------------------------------------------------
+            id: maxId + 1,
             carMake: req.body.carMake,
             carDate: req.body.carDate,
             carDoor: req.body.carDoor,

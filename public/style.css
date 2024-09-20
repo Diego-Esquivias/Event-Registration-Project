@@ -3,14 +3,23 @@ body {
     font-family: Arial, sans-serif;
 }
 
+hr {
+    border: 2.5px solid black;
+    border-radius: 10px;
+    margin: 4vh auto 4vh auto;
+}
+
 .content {
     width: 100vh;
     margin: auto;
     text-align: center;
+    padding: 0;
 }
 
 h1 {
     text-align: center;
+    width: 50%;
+    margin: auto;
 }
 
 #carList {
@@ -29,11 +38,15 @@ fieldset {
     background-color: rgba(128, 128, 128, 0);
     border-radius: 25px;
     border: black solid 2px;
-    input {
-        background-color: rgba(255, 255, 255, 0.579);
-        margin: 0.5vh auto 1vh auto;
-    }
     text-align: center;
+    input, select {
+        background-color: rgba(255, 255, 255, 0.579);
+        margin: 0.5vh auto 0.5vh auto;
+    }
+    button {
+        border-radius: 10px;
+        padding: 1vh;
+    }
 }
 
 legend {
@@ -41,4 +54,51 @@ legend {
     padding: 1vh;
     border-radius: 10px;
     color: white;
+}
+
+#registeredInfo {
+    list-style-type: none;
+}
+
+.event {
+    background-color: rgb(152, 55, 169);
+    padding: 1em;
+    width: 50vh;
+    margin: 2vh auto 2vh auto;
+    border-radius: 25px;
+}
+
+.edit-button {
+    background-color: rgb(255, 187, 0);
+    text-decoration: none;
+    padding: 1.5vh;
+    border-radius: 10px;
+}
+
+.edit-button a {
+    color: white; /* Change this to your preferred color */
+    text-decoration: none; /* Optional: Removes the underline */
+}
+
+#add a {
+    text-decoration: none;
+    color: black;
+}
+
+#delete a {
+    text-decoration: none;
+    color: white;
+}
+
+.delete-button {
+    background-color: rgb(255, 0, 0);
+    padding: 1.5vh;
+    border-radius: 10px;
+    color: white;
+}
+
+.back {
+    margin: 2vh auto auto auto;
+    width: 50%;
+    text-align: center;
 }

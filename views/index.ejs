@@ -4,40 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>New Car Showcase</title>
+    <title>Admin</title>
 </head>
 <body>
-    <h1>New Car Showcases</h1>
+    <h1>Admin Side</h1>
 
-    <ul>
-        <% events.forEach(event => { %>
-            <li>
-                <div class="event">
-                    <div class="task-details">
-                        <h3 class="task-name">Registered for Event <%= event.id %></h3>
-                        <p>Full Name: <%= event.firstName %> <%= event.lastName %></p>
-                        <p>Email: <%= event.email %></p>
-                    </div>
-                </div>
-            </li>
-        <% }); %>
-    </ul>
+    <br>
 
     <div class="form">
-        <form action="/tasks" method="POST">
+        <form action="/tasks" method="POST" class="content">
             <fieldset>
                 <legend>Add Car Showcase</legend>
                 <label for="1">Make: </label>
-                <input type="text" id="1" name="carMake" value="" placeholder="Car Make" required>
+                <input type="text" id="1" name="carMake" value="" placeholder="Car Make" required><br>
                 <label for="2">Date: </label>
-                <input type="date" id="2" name="carDate" value="" required>
+                <input type="date" id="2" name="carDate" value="" required><br>
                 <label for="3">Weight: </label>
-                <input type="number" id="3" name="carWeight" value="" placeholder="Car Weight" required>
+                <input type="number" id="3" name="carWeight" value="" placeholder="Car Weight" required><br>
                 <label for="4">Doors: </label>
                 <select name="carDoor" id="4">
                     <option value="2-door">2-Door</option>
                     <option value="4-door">4-Door</option>
-                </select>
+                </select><br>
                 <label for="5">Location: </label>
                 <select name="carLocation" id="5">
                     <option value="Alabama">Alabama</option>
@@ -90,28 +78,50 @@
                     <option value="West Virginia">West Virginia</option>
                     <option value="Wisconsin">Wisconsin</option>
                     <option value="Wyoming">Wyoming</option>
-                </select>
-                <button type="submit">Add Task</button>
+                </select><br>
+                <button type="submit" id="add"><a href="/admin">Add Task</a></button>
             </fieldset>         
         </form>
     </div>
-    
+
+    <hr>
+
+    <h1>Registered People Data Below</h1>
+
+    <ul class="content" id="registeredInfo">
+        <% events.forEach(event => { %>
+            <li>
+                <div class="event">
+                    <div class="task-details">
+                        <h3 class="task-name">Registered for Event <%= event.id %></h3>
+                        <p><strong>Full Name:</strong> <%= event.firstName %> <%= event.lastName %></p>
+                        <p><strong>Email:</strong> <%= event.email %></p>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+
+    <hr>
+
+    <h1>Edit Events Below</h1>
 
     <ul class="content" id="carList">
         <% tasks.forEach(task => { %>
             <li id="carItem">
                 <div class="task">
                     <div class="task-details">
-                        <h3 class="task-name"><%= task.carMake %></h3>
-                        <h5>Date: <%= task.carDate %></h5>
-                        <p class="task-desc">Weight: <%= task.carWeight %> lbs</p>
-                        <p class="task-desc">Location: <%= task.carLocation %></p>
-                        <p class="task-desc">Door Type: <%= task.carDoor %></p>
+                        <h1>Event <%= task.id %></h2>
+                        <h2 class="task-name"><%= task.carMake %></h3>
+                        <p><strong>Date:</strong> <%= task.carDate %></p>
+                        <p><strong>Weight:</strong> <%= task.carWeight %> lbs</p>
+                        <p><strong>Location:</strong> <%= task.carLocation %></p>
+                        <p><strong>Door Type:</strong> <%= task.carDoor %></p>
                     </div>
                     <div class="task-buttons">
                         <button class="edit-button"><a href="/tasks/<%= task.id %>/edit">Edit</a></button>
-                        <form action="/tasks/<%= task.id %>/delete" method="POST" style="display:inline;">
-                            <button class="delete-button" type="submit">Delete</button>
+                        <form action="/tasks/<%= task.id %>/delete" method="POST" style="display:inline;" id="delete">
+                            <button class="delete-button" type="submit"><a href="/admin">Delete</a></button>
                         </form>
                     </div>
                 </div>
